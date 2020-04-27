@@ -1,6 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { LocationController } from './location.controller';
-import { AppService } from '../app.service';
 
 describe('LocationController', () => {
   let appController: LocationController;
@@ -8,7 +7,6 @@ describe('LocationController', () => {
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
       controllers: [LocationController],
-      providers: [AppService],
     }).compile();
 
     appController = app.get<LocationController>(LocationController);
